@@ -10706,19 +10706,6 @@ if BF then
 	MiscTab:Toggle("Infinits Range observations haki",false,function(Value)
 		infobservations = Value
 	end)
-	MiscTap:AddToggle("Infinite Ability",false,function(value)
-        InfAbility = value
-        if value == false then
-            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility"):Destroy()
-        end
-    end)
-	spawn(function()
-		while wait() do
-			if infobservations then
-				game.Players.LocalPlayer.VisionRadius.Value = math.huge
-			end
-		end
-	end)
 	MiscTab:Toggle("Auto Click",autoclick,function(value)
 		AuctoClick = value
 	end)
